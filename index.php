@@ -107,10 +107,10 @@ if ($logfile != "" and $action == "delete") {
     
     &nbsp;&nbsp;&nbsp;version <?=$mod_version?><br>
     <? 
-    if (file_exists("$bin_mitmf")) { 
+    if (file_exists("/includes/MITMf-master/mitmf.py")) { 
         echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$mod_alias <font style='color:lime'>installed</font><br>";
     } else {
-        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$mod_alias <a href='includes/module_action.php?install=install_sslstrip' style='color:red'>install</a><br>";
+        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$mod_alias <a href='includes/module_action.php?install=install_$mod_name' style='color:red'>install</a><br>";
     } 
     ?>
 
